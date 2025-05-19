@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hero Section with Video Modal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <section class="hero">
+        <div class="content">
+            <div>
+                <h1>RPM tickets now available.</h1>
+                <button class="get-ticket">Get tickets now</button>
+            </div>
+            <img src="./bg-image.avif" alt="RPM Preview" />
+        </div>
+        <div class="video-thumbnail" id="openModal">
+            <div class="label">NEXT EVENT</div>
+            <button class="watch-btn">▶ Watch</button>
+            <video id="thumbnailVideo" autoplay loop playsinline muted>
+                <source src="https://storage.googleapis.com/msgsndr/ZInIXWxGceTb7MPAzGV1/media/682a42b3bac5a012eb46d42e.mp4 " />
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+    </section>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <video id="videoPlayer" controls>
+                <source src="https://storage.googleapis.com/msgsndr/ZInIXWxGceTb7MPAzGV1/media/682a42b3bac5a012eb46d42e.mp4 " />
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

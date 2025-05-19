@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: sans-serif;
+}
+.hero {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.content {
+    width: 90%;
+    height: 90%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 80px;
+    padding-left: 60px;
+}
+
+.content img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .hero{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .content{
+        position: relative;
+        width: 100%;
+        height: 500px;
+    }
+
+}
+
+.content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  max-width: 80%;
+}
+
+@media screen and (max-width: 600px) {
+    .content h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+}
+
+.get-ticket {
+  padding: 15px 30px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+.video-thumbnail {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  z-index: 1000;
+  width: 300px;
+  height: 200px;
+  background-color: #111;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .video-thumbnail{
+        width: 100%;
+        height: 200px;
+        margin-top: 20px;
+    }
+}
+
+.video-thumbnail img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #ccc;
+  font-size: 0.8rem;
+}
+.watch-btn {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+}
+.modal-content video {
+  width: 100%;
+  height: 400px;
+}
+.close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+}
